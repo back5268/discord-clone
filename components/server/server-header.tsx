@@ -39,7 +39,7 @@ export const ServerHeader = ({ server, role }: ServerHeaderProps) => {
             dark:border-neutral-800 border-b-2 hover:bg-zinc-700/10 dark:hover:bg-zinc-700/50 transaction"
         >
           {server.name}
-          <ChevronDown className="h-5 w-5 ml-auto" />
+          <ChevronDown className="h-5 w-5 ml-auto opacity-0 md:opacity-100" />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56 text-sx font-medium text-black dark:text-neutral-400 space-y-[2px]">
