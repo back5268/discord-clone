@@ -2,9 +2,9 @@
 
 import { FileIcon, X } from "lucide-react";
 import Image from "next/image";
-import { UploadDropzone } from "@uploadthing/react";
 import "@uploadthing/react/styles.css";
 import Error from "next/error";
+import { UploadDropzone } from "@/lib/uploadthing";
 
 interface FileUploadProps {
   onChange: (url?: string) => void;
@@ -58,9 +58,6 @@ export const FileUpload = ({ onChange, value, endpoint }: FileUploadProps) => {
       endpoint={endpoint}
       onClientUploadComplete={(res: { url: string }[]) => {
         onChange(res?.[0].url);
-      }}
-      onUploadError={(error: Error) => {
-        console.log(error);
       }}
     />
   );
